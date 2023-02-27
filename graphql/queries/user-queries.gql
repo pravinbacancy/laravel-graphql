@@ -1,0 +1,9 @@
+extend type Query{
+    "Query to get all users"
+    users(
+        orderBy: [OrderByClause!] @orderBy
+    ): [User!]! @paginate(defaultCount: 10)
+
+    "Query to get user by id"
+    userById(id: ID @eq): User @find
+}
