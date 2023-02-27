@@ -1,0 +1,10 @@
+extend type Mutation{
+    "Creating user using resolver method to store user"
+    createUser(input: CreateUserInput): User! 
+    
+    "Updating user using resolver method to update user"
+    updateUser(input: UpdateUserInput): User!
+
+    "Deleting user using resolver method to delete user"
+    deleteUser(id: ID!): User! @validator @delete
+}
