@@ -1,18 +1,12 @@
-type User{
+type Post{
     "Unique primary key."
     id: ID!
 
-    "Non-unique name."
+    "Non-unique post name."
     name: String!
 
-    "Unique email address."
-    email: String!
-
-    "When the email was verified."
-    email_verified_at: DateTime
-
-    "User posts"
-    posts: [Post]
+    "User ID."
+    user_id: String!
 
     "When the account was created."
     created_at: DateTime!
